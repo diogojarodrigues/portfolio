@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 import emailjs from "@emailjs/browser";
 
-export default function Contact() {
+export default function Contact({isMobile}) {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -27,17 +27,14 @@ export default function Contact() {
 
         }
 
-        // console.log(formData);
         emailjs.send("service_v55xwvf", "template_0vvoztd", templateParams, "siGv1uUS2DgzcFp6x")
         .then((result) => {
-            // console.log(result.status, result.text);
             window.alert("Email sent successfully!");
             setFormData({
                 name: "",
                 email: "",
                 message: ""
             }, (error) => {
-                // console.log(result.status, result.text);
                 window.alert("We are sorry but we were unable to send your email.\nWe will try to resolve the issue as soon as possible.");
             })
         })
@@ -57,7 +54,7 @@ export default function Contact() {
                 <Row>
                   <Col lg="6" className="form-group">
                     <input
-                      className="form-control"
+                      className={`form-control ${isMobile && "mb-3"}`}
                       id="name"
                       name="name"
                       placeholder="Name"

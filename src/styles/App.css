@@ -40,3 +40,7 @@ p {
 .hover {
     cursor: pointer;
 }
+
+.hover:hover {
+    color: white;
+}
