@@ -57,12 +57,12 @@ export default function Portfolio({isMobile}) {
 
             if (isMobile === true) {
                 return (
-                    <Container className="pb-5 mb-3" key={project.title} >
+                    <Container className="pb-5 mb-5" key={project.title} >
                     <Row className="d-flex flex-column justify-items-center">
-                        <h1 className="text-center mb-5">{project.title}</h1>
+                        <h1 className="text-center mb-3">{project.title}</h1>
                         <ImageComponent />
-                        <p className="text-center px-3 mt-5 mb-3">{project.shortDescription}</p>
-                        {project.link && <a href={project.link} style={{width: "auto"}} className="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer">Visit Website</a>}
+                        <p className="text-center px-3 mt-3 mb-3">{project.shortDescription}</p>
+                        {project.link && <a href={project.link} style={{width: "auto"}} className="btn btn-primary my-3" target="_blank" rel="noopener noreferrer">Visit Website</a>}
                     </Row>
                     </Container>
                 ) 
