@@ -1,12 +1,17 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { useMediaQuery } from 'react-responsive';
 
+import pomodoroPulse from "../assets/pomodoropulse(retangulo).png";
+import webstore from "../assets/webstore(retangulo).png";
+import solveETH from "../assets/SolveETH(retangulo).png";
+
+
 const projects = [
     {
         title: "Pomodoro Pulse", 
         description: "Pomodoro Pulse is a pomodoro timer designed for students and workers to enhance focus and increase productivity. Do you want to double your productivity? Give it a try!",
         shortDescription: "Pomodoro Pulse is a pomodoro timer designed for students and workers to enhance focus and increase productivity.",
-        image: "src/assets/pomodoropulse(retangulo).png", 
+        image: pomodoroPulse, 
         link: "https://pomodoropulse.netlify.app",
         github: "https://github.com/diogojarodrigues/pomodoro"
     },
@@ -14,7 +19,7 @@ const projects = [
         title: "Store Manager", 
         description: "The Store Manager is a comprehensive full-stack warehouse management system that manages customers and suppliers in a store. Efficiently handle customer data, track supplier information, and streamline interactions with both parties.",
         shortDescription: "The Store Manager is a comprehensive full-stack warehouse management system that manages customers and suppliers in a store.",
-        image: "src/assets/webstore(retangulo).png", 
+        image: webstore, 
         link: null,
         github: "https://github.com/diogojarodrigues/E-Commerce"
     },
@@ -22,7 +27,7 @@ const projects = [
         title: "SolveETH", 
         description: "The SolveETH was my fisrt blockchain project where users can trade ETH for qualified answers. Me and my team build this project during the ETH Lisbon Hackathon in 36 hours, from scratch and without previous experience of web3.",
         shortDescription: "The SolveETH was my fisrt blockchain project where users can trade ETH for qualified answers.",
-        image: "src/assets/SolveETH(retangulo).png", 
+        image: solveETH, 
         link: null,
         github: "https://github.com/diogojarodrigues/ETH-Global"
     },

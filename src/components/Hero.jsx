@@ -1,10 +1,13 @@
 import { Stack, Image, Button, Row, Col } from "react-bootstrap";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 
+import profilePicture from "../assets/profile-picture.jpeg";
+
 export default function Hero() {
   return (
     <div className="hero" id="hero">
-      <Image src="src/assets/profile-picture.jpeg" roundedCircle style={{ width: "20rem" }} />
+      <Image src={profilePicture} alt="Profile Picture" roundedCircle style={{ width: "20rem" }} />
+
       <h1 style={{ marginBottom: "1.2rem", marginTop: "2.2rem" }} className="h1-responsive text-center">Diogo Rodrigues</h1>
       <h4 style={{ marginBottom: "5rem"}}>Student, Developer & Self Learner</h4>
 

@@ -1,5 +1,7 @@
 import { Col, Container, Image, Row } from "react-bootstrap";
 
+import istLogo from "../assets/ist-logo.png";
+
 export default function About({isMobile}) {
     return (
         <section id="about" className="py-5">
@@ -15,13 +17,13 @@ export default function About({isMobile}) {
                 </Col>
 
                 <Col xl={2} lg={3} sm={4} className="my-auto px-0 d-flex justify-content-end">
-                    <Image src="src/assets/ist-logo.png" rounded style={{width: "10rem"}} />
+                    <Image src={istLogo} alt="ist-logo" rounded style={{width: "10rem"}} />
                 </Col>
                 </Row>
             ) : (
                 <>
                 <Row className="d-flex justify-content-center mb-5">
-                    <Image src="src/assets/ist-logo.png" rounded style={{width: "15rem"}} />
+                    <Image src={istLogo} alt="ist-logo" rounded style={{width: "15rem"}} />
                 </Row>
                 <Row className="text-center">
                     <h2 className="mb-3">Hello!</h2>
