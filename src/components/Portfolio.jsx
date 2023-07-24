@@ -96,7 +96,7 @@ export default function Portfolio({isMobile}) {
 
             const TitleAnimated = () => {
                 const titleRef = useRef(null);
-                const isTitleVisible = useInView(titleRef, { once: true, amount: 0.4 });
+                const isTitleVisible = useInView(titleRef, { once: true, amount: isMobile ? 0.5 : 0.2 });
                 const titleAnimation = useAnimation();
 
                 useEffect(() => {
@@ -121,7 +121,7 @@ export default function Portfolio({isMobile}) {
 
             const TextAnimated = () => {
                 const textRef = useRef(null);
-                const isTextVisible = useInView(textRef, { once: true, amount: 0.7 });
+                const isTextVisible = useInView(textRef, { once: true, amount: isMobile ? 0.5 : 1});
                 const textAnimation = useAnimation();
 
                 useEffect(() => {
@@ -146,7 +146,7 @@ export default function Portfolio({isMobile}) {
 
             const ImageAnimated = () => {
                 const imageRef = useRef(null);
-                const isImageVisible = useInView(imageRef, { once: true, amount: 0.6 });
+                const isImageVisible = useInView(imageRef, { once: true, amount: isMobile ? 0.5 : 0.5 });
                 const imageAnimation = useAnimation();
 
                 useEffect(() => {
@@ -163,7 +163,7 @@ export default function Portfolio({isMobile}) {
                                 variants={getVariants(isMobile, index, "image")}
                                 initial="hidden"
                                 animate={imageAnimation}
-                                transition={{ type: 'spring', duration: 2, bounce: 0.6 }}
+                                transition={{ type: 'spring', duration: 2, bounce: 0.5 }}
                             >
                                 <Image
                                     src={project.image}
