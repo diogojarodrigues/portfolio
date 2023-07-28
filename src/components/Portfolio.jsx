@@ -131,6 +131,7 @@ export default function Portfolio({isMobile}) {
                 }, [isTextVisible]);
 
                 return (
+                    <>
                     <motion.p
                         ref={textRef} 
                         className="text-center px-3 mt-4 mb-3"
@@ -141,6 +142,8 @@ export default function Portfolio({isMobile}) {
                     >
                         {(shortDescription || isMobile) ? project.shortDescription : project.description}
                     </motion.p>
+                    {project.link && <a href={project.link} className="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer">Visit Website</a>}
+                    </>
                 )
             }
 
@@ -186,22 +189,10 @@ export default function Portfolio({isMobile}) {
                             <TitleAnimated />
                             <ImageAnimated />
                             <TextAnimated />
-                            {project.link && <a href={project.link} className="btn btn-primary my-3" target="_blank" rel="noopener noreferrer">Visit Website</a>}
                         </Col>
                     </Row>
                     </Container>
                 ) 
-            }
-
-            const TextComponent = () => {
-                return (
-                    <Col lg={6} className="d-flex flex-column justify-content-center align-items-center px-5">
-                        <h1 className="text-center mb-5">{project.title}</h1>
-                        <p className="text-center px-3">{shortDescription ? project.shortDescription : project.description}</p>
-                        {project.link && <a href={project.link} className="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer">Visit Website</a>}
-                    </Col>
-                )
-                
             }
 
             return (
