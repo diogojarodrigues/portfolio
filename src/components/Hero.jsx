@@ -12,7 +12,12 @@ export default function Hero({ isMobile }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 3 }}
       >
-        <Image src={profilePicture} alt="Profile Picture" roundedCircle style={{ width: "20rem" }} />
+        <Image
+          src={profilePicture}
+          alt="Profile Picture"
+          roundedCircle
+          style={{ width: "20rem" }}
+        />
       </motion.div>
 
       {/* Apply the animation to the header */}
@@ -41,11 +46,21 @@ export default function Hero({ isMobile }) {
         transition={{ delay: 2.4 }}
       >
         <Stack direction="horizontal" gap={3} className="mx-auto">
-          <Button className="icon-link" target="_blank" href="https://www.linkedin.com/in/diogo-rodrigues-7181a0246/" variant="light">
+          <Button
+            className="icon-link"
+            target="_blank"
+            href="https://www.linkedin.com/in/diogo-rodrigues-7181a0246/"
+            variant="light"
+          >
             <BsLinkedin />
             LinkedIn
           </Button>
-          <Button className="icon-link" target="_blank" href="https://github.com/diogojarodrigues" variant="light">
+          <Button
+            className="icon-link"
+            target="_blank"
+            href="https://github.com/diogojarodrigues"
+            variant="light"
+          >
             <BsGithub />
             Github
           </Button>
