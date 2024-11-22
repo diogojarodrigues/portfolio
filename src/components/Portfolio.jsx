@@ -31,7 +31,7 @@ const projects = [
     github: "https://github.com/diogojarodrigues/Consensus-Paxos/",
 },
 {
-    title: "HumanaEthica",
+    title: "Humana Ethica",
     description: "A full-stack app connecting users to volunteer opportunities for personal and social growth.",
     shortDescription: "App connecting users to volunteer opportunities.",
     image: humanaEthica,
