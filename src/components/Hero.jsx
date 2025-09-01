@@ -37,7 +37,7 @@ export default function Hero({ isMobile }) {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        Student, Developer & Self Learner
+        Engineer, Developer & Entrepreneur
       </motion.h4>
 
       <motion.div
