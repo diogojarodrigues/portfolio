@@ -14,11 +14,11 @@ export default function About({ isMobile }) {
                 I'm Diogo Rodrigues from Portugal!
               </p>
               <p style={{ marginBottom: "0.1rem", fontSize: "1.3rem" }}>
-                I am currently studying Computer Science at Instituto Superior
+                I graduated in Computer Engineering from Instituto Superior
                 Técnico (IST) in Lisbon.
               </p>
               <p style={{ marginBottom: "0.4rem", fontSize: "1.3rem" }}>
-                I devote my free time to learning more about programing and
+                I devote my free time to learning more about programming and
                 building side projects.
               </p>
               <p style={{ fontSize: "1.3rem" }}>
@@ -56,7 +56,7 @@ export default function About({ isMobile }) {
                 I'm Diogo Rodrigues from Portugal
               </p>
               <p style={{ marginBottom: "1rem", fontSize: "1.3rem" }}>
-                I study Computer Science at IST.
+                I graduated in Computer Engineering from IST.
               </p>
               <p style={{ marginBottom: "0rem", fontSize: "1.3rem" }}>
                 Here are some of my projects
