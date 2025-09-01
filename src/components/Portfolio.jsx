@@ -8,10 +8,40 @@ import pomodoroPulse from "../assets/pomodoropulse(retangulo).png";
 import consensusPaxos from "../assets/paxos-diagram.png";
 import solveETH from "../assets/SolveETH(retangulo).png";
 import humanaEthica from "../assets/humanaethica.png";
+import beeWisee from "../assets/beeWisee.png";
 
 import { useEffect, useRef } from "react";
 
 const projects = [
+  {
+    title: "BeeWisee",
+    description:
+      "BeeWisee is my first start up, where mentors help students bridge the gap between education and employment.",
+    shortDescription: "Comunity platform connecting mentors and students for career growth.",
+    image: beeWisee,
+    date: 2025,
+    link: "https://beewisee.com",
+    github: null,
+  },
+  {
+    title: "Consensus Paxos",
+    description:
+      "An implementation of the Paxos algorithm for distributed consensus in fault-tolerant systems with reconfiguration.",
+    shortDescription: "Paxos algorithm for distributed consensus in fault-tolerant systems.",
+    image: consensusPaxos,
+    date: 2024,
+    link: null,
+    github: "https://github.com/diogojarodrigues/Consensus-Paxos/",
+  },
+  {
+    title: "Humana Ethica",
+    description: "A full-stack app connecting users to volunteer opportunities for personal and social growth.",
+    shortDescription: "App connecting users to volunteer opportunities.",
+    image: humanaEthica,
+    date: 2023,
+    link: null,
+    github: "https://github.com/diogojarodrigues/HumanaEthica/",
+  },
   {
     title: "Pomodoro Pulse",
     description:
@@ -19,32 +49,17 @@ const projects = [
     shortDescription:
       "Pomodoro Pulse is a pomodoro timer designed for students and workers to enhance focus and increase productivity.",
     image: pomodoroPulse,
+    date: 2022,
     link: "https://pomodoropulse.netlify.app",
     github: "https://github.com/diogojarodrigues/pomodoro",
   },
   {
-    title: "Consensus Paxos",
-    description: "An implementation of the Paxos algorithm for distributed consensus in fault-tolerant systems with reconfiguration.",
-    shortDescription: "Paxos algorithm for distributed consensus in fault-tolerant systems.",
-    image: consensusPaxos,
-    link: null,
-    github: "https://github.com/diogojarodrigues/Consensus-Paxos/",
-},
-{
-    title: "Humana Ethica",
-    description: "A full-stack app connecting users to volunteer opportunities for personal and social growth.",
-    shortDescription: "App connecting users to volunteer opportunities.",
-    image: humanaEthica,
-    link: null,
-    github: "https://github.com/diogojarodrigues/HumanaEthica/",
-},
-  {
     title: "SolveETH",
     description:
       "The SolveETH was my fisrt blockchain project where users can trade ETH for qualified answers. Me and my team build this project during the ETH Lisbon Hackathon in 36 hours, from scratch and without previous experience of web3.",
-    shortDescription:
-      "The SolveETH was my fisrt blockchain project where users can trade ETH for qualified answers.",
+    shortDescription: "The SolveETH was my fisrt blockchain project where users can trade ETH for qualified answers.",
     image: solveETH,
+    date: 2022,
     link: null,
     github: "https://github.com/diogojarodrigues/ETH-Global",
   },
@@ -179,32 +194,30 @@ export default function Portfolio({ isMobile }) {
               animate={textAnimation}
               transition={{ duration: 2 }}
             >
-              {shortDescription || isMobile
-                ? project.shortDescription
-                : project.description}
+              {shortDescription || isMobile ? project.shortDescription : project.description}
             </motion.p>
             <div className="d-flex align-items-center gap-2 mt-3">
-  {project.github && (
-    <a
-      href={project.github}
-      className="btn btn-secondary d-flex align-items-center"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <BsGithub className="me-2" /> GitHub
-    </a>
-  )}
-  {project.link && (
-    <a
-      href={project.link}
-      className="btn btn-primary d-flex align-items-center"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <BsGlobe className="me-2" /> Visit Website
-    </a>
-  )}
-</div>
+              {project.github && (
+                <a
+                  href={project.github}
+                  className="btn btn-secondary d-flex align-items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsGithub className="me-2" /> GitHub
+                </a>
+              )}
+              {project.link && (
+                <a
+                  href={project.link}
+                  className="btn btn-primary d-flex align-items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsGlobe className="me-2" /> Visit Website
+                </a>
+              )}
+            </div>
           </>
         );
       };
@@ -252,10 +265,7 @@ export default function Portfolio({ isMobile }) {
         return (
           <Container className="pb-5 mb-4" key={project.title}>
             <Row>
-              <Col
-                lg={6}
-                className="d-flex flex-column justify-content-center align-items-center px-0"
-              >
+              <Col lg={6} className="d-flex flex-column justify-content-center align-items-center px-0">
                 <TitleAnimated />
                 <ImageAnimated />
                 <TextAnimated />
@@ -273,20 +283,14 @@ export default function Portfolio({ isMobile }) {
                 <Col>
                   <ImageAnimated />
                 </Col>
-                <Col
-                  lg={6}
-                  className="d-flex flex-column justify-content-center align-items-center px-5"
-                >
+                <Col lg={6} className="d-flex flex-column justify-content-center align-items-center px-5">
                   <TitleAnimated />
                   <TextAnimated />
                 </Col>
               </>
             ) : (
               <>
-                <Col
-                  lg={6}
-                  className="d-flex flex-column justify-content-center align-items-center px-5"
-                >
+                <Col lg={6} className="d-flex flex-column justify-content-center align-items-center px-5">
                   <TitleAnimated />
                   <TextAnimated />
                 </Col>
@@ -304,12 +308,7 @@ export default function Portfolio({ isMobile }) {
   const shortDescription = useMediaQuery({ maxWidth: 1199 });
 
   return (
-    <Container
-      fluid
-      className="pt-5 pb-1 bg-gray-100"
-      style={{ backgroundColor: "#ebd9c6" }}
-      id="portfolio"
-    >
+    <Container fluid className="pt-5 pb-1 bg-gray-100" style={{ backgroundColor: "#ebd9c6" }} id="portfolio">
       <Container className="my-5">
         <h1 style={{ fontSize: "3rem" }}>My Projects</h1>
       </Container>

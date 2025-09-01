@@ -27,12 +27,7 @@ export default function Contact({ isMobile }) {
     };
 
     emailjs
-      .send(
-        "service_v55xwvf",
-        "template_0vvoztd",
-        templateParams,
-        "siGv1uUS2DgzcFp6x",
-      )
+      .send("service_v55xwvf", "template_0vvoztd", templateParams, "siGv1uUS2DgzcFp6x")
       .then((result) => {
         window.alert("Email sent successfully!");
         setFormData(
@@ -43,9 +38,14 @@ export default function Contact({ isMobile }) {
           },
           (error) => {
             window.alert(
-              "We are sorry but we were unable to send your email.\nWe will try to resolve the issue as soon as possible.",
+              "We are sorry but we were unable to send your email.\nWe will try to resolve the issue as soon as possible."
             );
-          },
+          }
+        );
+      })
+      .catch((error) => {
+        window.alert(
+          "We are sorry but we were unable to send your email.\nWe will try to resolve the issue as soon as possible."
         );
       });
   };
