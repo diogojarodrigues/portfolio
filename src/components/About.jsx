@@ -18,8 +18,7 @@ export default function About({ isMobile }) {
                 Técnico (IST) in Lisbon.
               </p>
               <p style={{ marginBottom: "0.4rem", fontSize: "1.3rem" }}>
-                I devote my free time to learning more about programming and
-                building side projects.
+                I spend my free time learning new technologies and building side projects.
               </p>
               <p style={{ fontSize: "1.3rem" }}>
                 Below, you can explore some of my projects...
