@@ -8,7 +8,7 @@ import pomodoroPulse from "../assets/pomodoropulse(retangulo).png";
 import consensusPaxos from "../assets/paxos-diagram.png";
 import solveETH from "../assets/SolveETH(retangulo).png";
 import humanaEthica from "../assets/humanaethica.png";
-import beeWisee from "../assets/beeWisee.png";
+import beeWisee from "../assets/beeWisee.jpg";
 
 import { useEffect, useRef } from "react";
 
@@ -159,7 +159,7 @@ export default function Portfolio({ isMobile }) {
         return (
           <motion.h1
             ref={titleRef}
-            className="text-center mb-4"
+            className="text-center mb-3"
             variants={getVariants(isMobile, index, "title")}
             initial="hidden"
             animate={titleAnimation}
@@ -188,7 +188,7 @@ export default function Portfolio({ isMobile }) {
           <>
             <motion.p
               ref={textRef}
-              className="text-center px-3 mt-4 mb-3"
+              className="text-center px-3 mt-3 mb-3"
               variants={getVariants(isMobile, index, "text")}
               initial="hidden"
               animate={textAnimation}
@@ -196,7 +196,17 @@ export default function Portfolio({ isMobile }) {
             >
               {shortDescription || isMobile ? project.shortDescription : project.description}
             </motion.p>
-            <div className="d-flex align-items-center gap-2 mt-3">
+            <motion.div
+              className="text-muted text-center mb-3"
+              style={{ fontSize: "0.9rem", letterSpacing: "0.5px" }}
+              variants={getVariants(isMobile, index, "text")}
+              initial="hidden"
+              animate={textAnimation}
+              transition={{ duration: 1.5, delay: 0.1 }}
+            >
+              {project.date}
+            </motion.div>
+            <div className="d-flex align-items-center gap-2 mt-1">
               {project.github && (
                 <a
                   href={project.github}
@@ -237,7 +247,7 @@ export default function Portfolio({ isMobile }) {
         }, [isImageVisible]);
 
         return (
-          <a href={project.github} target="_blank" rel="noopener noreferrer">
+          <a href={project.link ? project.link : project.github} target="_blank" rel="noopener noreferrer">
             <motion.div
               className="image-container mx-2"
               ref={imageRef}
@@ -257,7 +267,6 @@ export default function Portfolio({ isMobile }) {
               />
             </motion.div>
           </a>
-          // </motion.div>
         );
       };
 
